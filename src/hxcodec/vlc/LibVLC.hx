@@ -1,5 +1,9 @@
 package hxcodec.vlc;
 
+#if !(desktop || android)
+#error "The current target platform isn't supported by hxCodec. If you are targeting Windows/Mac/Linux/Android and you are getting this message, please contact us.";
+#end
+
 #if (!cpp && macro)
 #error "LibVLC supports only C++ target platforms."
 #end
